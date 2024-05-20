@@ -7,7 +7,9 @@
 
 <div class="container d-flex justify-content-center align-items-center mt-5">
   <ul class="list-unstyled">
+  <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-info" %>
 <div class="card-container">
+
   <% @list.movies.each do |movie| %>
     <div class="card mx-3">
       <img class="card-img-top" src="<%= movie.poster_url %>" alt="<%= @movie.title %>">
