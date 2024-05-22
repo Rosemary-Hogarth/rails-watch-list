@@ -1,5 +1,7 @@
+<div class="container">
 <%= simple_form_for([@list, @list.bookmarks.build]) do |f| %>
   <%= f.association :movie, as: :select %>
-   <%= f.input :comment %>
-  <%= f.button :submit %>
+  <%= f.input :comment %>
+  <%= f.button :submit, class: "btn btn-info"  %>
 <% end %>
+</div>
