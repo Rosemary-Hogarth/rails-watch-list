@@ -1,4 +1,6 @@
 <%= simple_form_for @list do |f| %>
   <%= f.input :name %>
-   <%= f.button :submit, class: "btn btn-info" %>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit, class: "btn btn-info" %>
+
 <% end %>
