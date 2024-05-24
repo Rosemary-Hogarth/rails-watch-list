@@ -8,6 +8,7 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
     @movies = @list.movies
     @movie = Movie.new
+    @bookmarks = @list.bookmarks.includes(:movie)
   end
 
   def new
@@ -22,6 +23,12 @@ class ListsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @list = List.find(params[:id])
+    @list.destroy
+    redirect_to root_path, notice: 'List was successfully deleted.'
   end
 
   private

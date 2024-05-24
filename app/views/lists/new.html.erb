@@ -1,6 +1,14 @@
+<div class="banner mb-4" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+
+<h1 class="mt-4">Create a new list</h1>
+</div>
+<div class="container">
+
 <%= simple_form_for @list do |f| %>
   <%= f.input :name %>
   <%= f.input :photo, as: :file %>
   <%= f.button :submit, class: "btn btn-info" %>
 
 <% end %>
+<div class="back-button"><%= link_to "Back to lists", root_path, class: "btn btn-outline-secondary" %></div>
+</div>
